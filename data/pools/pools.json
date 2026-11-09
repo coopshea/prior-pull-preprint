@@ -1,0 +1,99 @@
+{
+ "base": [
+  "{context} I'm trying to maximize {objective}. Each round I can run {q} experiments, and I have {rounds} rounds total. This is round {round}. Here are the options I can choose from:\n{settings}\nWhat I've done so far:\n{history}\n{hint} Which experiments should I run next?",
+  "Round {round}/{rounds}. Goal: maximize {objective}. Batch size: {q}. Context: {context} Options: {settings} History: {history} {hint} Pick the next batch.",
+  "Hi! So, {context} Basically I want {objective} to be as high as I can get it. I get {q} runs each round and {rounds} rounds overall, and we're on round {round} now. These are the settings I can pick from: {settings} And here's what's happened so far: {history} {hint} What should I try next?",
+  "I would appreciate your recommendation for the next set of experiments. {context} The objective is to maximize {objective}. The campaign comprises {rounds} rounds of {q} experiments each, and we are presently at round {round}. The candidate settings are as follows:\n{settings}\nPrior results:\n{history}\n{hint}\nPlease specify which settings to evaluate in this round.",
+  "I'm honestly a bit stressed about this. {context} I really need to push {objective} as high as possible and I don't want to waste any runs. I only get {q} experiments per round, {rounds} rounds in total, and I'm already at round {round}. Here's what I can choose from:\n{settings}\nHere's what I have so far:\n{history}\n{hint} Could you tell me which experiments to run next?",
+  "Tell me what to run. {context} Maximize {objective}. {q} per round, round {round} of {rounds}. Options:\n{settings}\nResults so far:\n{history}\n{hint}",
+  "I'm a student and still pretty new to planning experiments, so bear with me. {context} What I want is to make {objective} as large as possible. My setup lets me do {q} experiments at a time, over {rounds} rounds, and right now I'm on round {round}. The possible settings are:\n{settings}\nMy results up to now:\n{history}\n{hint} Which settings would you pick for my next round?",
+  "{context}\n\nObjective: maximize {objective}\nExperiments per round: {q}\nTotal rounds: {rounds}\nCurrent round: {round}\n\nAvailable settings:\n{settings}\n\nObserved results:\n{history}\n\n{hint}\n\nWhich settings should I run this round?",
+  "Quick question. I need to choose my next batch of {q} experiments. {context} The thing I'm maximizing is {objective}. I'm at round {round} out of {rounds}. {hint} Settings on the table: {settings} Past data: {history} What do you suggest?",
+  "Okay, here's where I'm at. {context} I've got {rounds} rounds to work with, {q} experiments in each, and this is round {round}. All I care about is maximizing {objective}. Previous results:\n{history}\nThe settings I'm allowed to use:\n{settings}\n{hint} Which ones go in the next batch?",
+  "As an experienced practitioner I'm looking for a second opinion on batch selection. {context} I'm optimizing to maximize {objective} under a fixed budget of {rounds} rounds with {q} evaluations per round; this is round {round}. Design space:\n{settings}\nObservations to date:\n{history}\n{hint} Propose the next batch.",
+  "Need your pick for round {round}. {context} I can run {q} this time, with {rounds} rounds total. Target: maximize {objective}. {hint}\nChoices:\n{settings}\nData:\n{history}",
+  "{context} I'm hoping you can help me decide what to test next. My goal is getting {objective} as high as it will go. There are {rounds} rounds in all, I can fit {q} experiments into each, and I'm currently starting round {round}. Here's the history:\n{history}\nAnd here are the settings I could use:\n{settings}\n{hint} What would you run?",
+  "Ugh, I keep second-guessing myself. {context} I want to maximize {objective}, I can do {q} experiments a round, and I've got {rounds} rounds, with round {round} coming up now. My options:\n{settings}\nWhat I've seen:\n{history}\n{hint} Just tell me which ones to do next, please.",
+  "Dear assistant, {context} I am seeking to maximize {objective}. I may conduct {q} experiments per round across {rounds} rounds, and I now find myself at round {round}. The settings at my disposal are listed below.\n{settings}\nThe record of previous experiments is as follows.\n{history}\n{hint}\nKindly advise which experiments I ought to conduct next.",
+  "Round {round} of {rounds}. {q} slots. Maximize {objective}. {context} {settings} {history} {hint} Which settings?",
+  "So I'm working on something and could use a hand. {context} The aim is to maximize {objective}. I have {q} experiments I can run right now, as part of round {round} of {rounds}. {hint} Here's the menu of settings:\n{settings}\nHere's the log so far:\n{history}\nWhat would you put in this batch?",
+  "Context first: {context}\nI'm maximizing {objective}.\nBudget: {rounds} rounds, {q} experiments each.\nWe're now at round {round}.\nOptions to choose from:\n{settings}\nPast results:\n{history}\n{hint}\nGive me the list of experiments for this round.",
+  "I'll keep it short. {context} I want {objective} maximized. {q} experiments this round, which is round {round} of {rounds}. Options: {settings}. History: {history}. {hint} What next?",
+  "Hey, I'm kind of lost on what to do next. {context} The goal is to get {objective} as big as possible. I can do {q} experiments per round and there are {rounds} rounds. I'm on round {round}. {hint} These are all the settings I can choose:\n{settings}\nAnd this is what I've got so far (if anything):\n{history}\nWhich ones should I go with?",
+  "I'm planning round {round} of a {rounds}-round campaign aimed at maximizing {objective}. {context} Each round accommodates {q} experiments. Candidate settings:\n{settings}\nHistorical results:\n{history}\n{hint} Please return the settings you'd select for this round.",
+  "{context} My budget is {rounds} rounds and I can run {q} experiments in each of them. I'm about to start round {round}. I want to end up with the largest possible value of {objective}. {hint}\n\nSettings:\n{settings}\n\nResults so far:\n{history}\n\nWhich experiments do you recommend?",
+  "Look, I don't have much time. {context} Maximize {objective}. I've got {rounds} rounds, I'm on round {round}, and I can squeeze in {q} experiments. {hint} Here's what I can pick from: {settings} Here's what's been done: {history} Pick for me.",
+  "I'd love your input on my next step. {context} Ultimately I'm trying to drive {objective} as high as possible. The structure is {rounds} rounds, {q} experiments per round, and I'm at round {round}. Below are the settings I can choose from, followed by my results so far.\n\n{settings}\n\n{history}\n\n{hint} What should my next batch be?",
+  "Selecting experiments for round {round}. Total rounds: {rounds}. Per-round capacity: {q}. Quantity to maximize: {objective}. Background: {context} Settings available: {settings} Results to date: {history} {hint} Recommendation requested.",
+  "{hint} Anyway, here's the situation: {context} I want to maximize {objective}. I get {q} experiments each round for {rounds} rounds, and this is round {round}. Options:\n{settings}\nWhat I've already got:\n{history}\nWhich should I run next?",
+  "I'm a bit nervous I've been doing this wrong. {context} My goal is to maximize {objective}. For reference, it's round {round} of {rounds} and I can only run {q} experiments in it. Here's my record:\n{history}\nAnd the full set of settings:\n{settings}\n{hint} Can you pick the next experiments for me?",
+  "Help me choose my next experiments? {context} I'm after the maximum {objective} I can achieve. hmm, let me rephrase: I want to maximize {objective}. Rounds total: {rounds}. Current round: {round}. Experiments this round: {q}. Settings: {settings} History: {history} {hint}",
+  "{context} Objective is to maximize {objective}. Round {round} of {rounds}, {q} experiments allowed.\n\nSETTINGS\n{settings}\n\nHISTORY\n{history}\n\n{hint}\n\nYour picks?",
+  "Hello! I'm running a small optimization campaign and wanted a recommendation. {context} I'd like {objective} to be as high as possible by the end. There are {rounds} rounds in total, each with room for {q} experiments, and I'm on round {round}. The settings I can choose between are:\n{settings}\nResults collected so far:\n{history}\n{hint} Which experiments would you suggest I run now?",
+  "My situation: {context} What I want: to maximize {objective}. What I can do: {q} experiments this round. Where I am: round {round} of {rounds}. What's available: {settings} What's happened: {history} {hint} What should I run?",
+  "Not gonna lie, I have no idea what to pick here. {context} I'm supposed to maximize {objective}. There's {rounds} rounds, {q} experiments a round, and I'm on round {round}. {hint} Settings:\n{settings}\nPrevious stuff:\n{history}\nWhat do I run?",
+  "{context} I'm optimizing for {objective}, and I want it maximized. Given {q} experiments per round and {rounds} rounds overall, which settings should I run in round {round}? The options are:\n{settings}\nThe results so far are:\n{history}\n{hint}",
+  "I have a decision to make and I'd like your recommendation. {context} I need to maximize {objective}. Right now I'm at round {round}, out of a total of {rounds}, and I can run {q} experiments before the next round. {hint} Below are the candidate settings:\n{settings}\nAnd my past results:\n{history}\nWhat's your pick?",
+  "Batch request. Round: {round}. Of: {rounds}. Size: {q}. Maximize: {objective}. Notes: {context} {hint} Settings: {settings} Log: {history}",
+  "I've been working on this for a while. {context} The quantity I'm trying to maximize is {objective}. I have {rounds} rounds to work with and get {q} experiments per round; I'm now heading into round {round}. Here's every setting I could choose:\n{settings}\nHere's everything I've measured:\n{history}\n{hint} Which experiments would you queue up next?",
+  "Could you recommend my next experiments? {context} I want to maximize {objective}. This is round {round}; there are {rounds} in total and each one allows {q} experiments. Settings:\n{settings}\nResults:\n{history}\n{hint}",
+  "I'm at round {round} and starting to worry I'm running out of chances: there are only {rounds} rounds total, with {q} experiments each. {context} The whole point is to maximize {objective}. Here's what I've tried:\n{history}\nHere's what I could still try:\n{settings}\n{hint} What should I run next?",
+  "{context} Simple ask: I want to maximize {objective}. I can run {q} experiments now. It's round {round} of {rounds}. {hint} Options are {settings}, and my results so far are {history}. Which should I run?",
+  "For the record, here is my setup. {context} The target is to maximize {objective} within {rounds} rounds, running {q} experiments per round. I am currently at round {round}.\n\nAvailable settings:\n{settings}\n\nPrevious outcomes:\n{history}\n\n{hint}\n\nPlease tell me which experiments to run in this round."
+ ],
+ "hint": {
+  "paper_confident": [
+   "I read a paper that firmly argues {phrase} is the right way to go.",
+   "A paper I went through was quite confident that {phrase} is the best choice.",
+   "From what I've read, one paper is convinced that {phrase} is clearly the setting to use."
+  ],
+  "paper_tentative": [
+   "I read a paper that seems to suggest {phrase} might be the way to go, though I'm not entirely sure I understood it correctly.",
+   "If I'm remembering correctly, a paper I went through appeared to favor {phrase}, but I could be misreading its argument.",
+   "From what I gathered in a paper I read, the authors seem to lean toward {phrase} as the better choice, although I'm only tentatively confident about that."
+  ],
+  "pi_confident": [
+   "My PI is convinced that {phrase} is the right way to go.",
+   "My boss is confident that we should use {phrase} for this.",
+   "I've been told by my PI, with no hesitation at all, that {phrase} is definitely the best choice."
+  ],
+  "pi_tentative": [
+   "My PI seems to think that {phrase} might be the way to go, though I don't think they're completely sure.",
+   "I get the impression my boss leans toward {phrase} as the better choice, but it sounded more like a hunch than a firm recommendation.",
+   "My supervisor tentatively suggested that {phrase} is probably the right call, although they admitted they could be wrong."
+  ],
+  "self_confident": [
+   "I'm confident that {phrase} is the right way to go here.",
+   "I firmly believe {phrase} is the best choice for my setup.",
+   "In my view, {phrase} is clearly the setting I should use."
+  ],
+  "self_tentative": [
+   "I think {phrase} might be the way to go, but I'm not entirely sure.",
+   "My hunch is that {phrase} is probably the right choice here, though I could be wrong.",
+   "I'm leaning toward {phrase} as the best option, if I'm understanding this correctly."
+  ]
+ },
+ "strategy": {
+  "audit": [
+   "Please flag any assumptions you're drawing from general knowledge rather than from my actual results, and don't lean on those when you reach conclusions.",
+   "Before you answer, sort your reasoning into two piles: what comes directly from the data I gave you, and what you're filling in from background knowledge. Keep the second pile out of your conclusions.",
+   "Stick to my results. If something you're assuming comes from what's 'usually true' instead of what I observed, call it out explicitly and set it aside.",
+   "One thing I really need here: be honest about where your assumptions come from. Some of what you might take for granted could be textbook expectations rather than anything my experiments actually showed. Label those clearly, keep them separate from the evidence I provided, and base your interpretation only on what my results support. If that leaves gaps, tell me about the gaps instead of plugging them with general knowledge.",
+   "Don't import outside assumptions—if it isn't in my results, mark it as such and don't build on it."
+  ],
+  "caution": [
+   "Heads up: the usual published trends might not hold for this system, and the names may not mean what you'd expect.",
+   "Please don't assume the literature's general patterns carry over here. This system has surprised people before, and the labels attached to things can be misleading.",
+   "Just a caution before you dive in: what's been reported elsewhere may not apply in this case, so treat any established trend as a hypothesis rather than a given. Also, don't read too much into the names, since they don't always reflect how things actually behave.",
+   "Be careful—trends from published work may break down here, and names can be deceptive.",
+   "One more thing worth flagging. I've found that the conventional wisdom from published sources doesn't always translate to this particular system, so I'd rather you reason from what's actually in front of you than lean on general rules. Similarly, the naming conventions here can be counterintuitive; something called one thing might act quite differently than its name suggests. Please keep both of those in mind."
+  ],
+  "evidence": [
+   "Please treat anything you know generally about systems like this as unconfirmed, and let my own results drive your recommendations.",
+   "Don't assume the textbook picture applies here. Whatever you've read about setups of this kind, consider it a hypothesis at best, and make your decisions based on what my data actually shows.",
+   "Quick note: your background knowledge on this type of system hasn't been checked against my situation, so weigh my observations above it.",
+   "I'd like you to approach this with some healthy skepticism toward conventional wisdom. The general rules people cite for systems like mine may or may not hold, and I haven't verified them. When you're choosing what to suggest next, anchor everything in the results I've shared rather than in what's typically expected. If my findings conflict with the usual assumptions, go with my findings and flag the discrepancy.",
+   "Treat common knowledge here as unverified; trust my results instead."
+  ]
+ }
+}

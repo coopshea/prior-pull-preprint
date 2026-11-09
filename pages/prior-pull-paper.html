@@ -1,0 +1,160 @@
+<title>Prior Pull</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+/* A journal preprint: full-width title block, then two reading columns with figures spanning both. */
+:root {
+  --paper: #ffffff; --ink: #17202a; --muted: #566573; --rule: #cfd8df;
+  --panel: #f2f6f8; --accent: #17627a; --accent-soft: #dcecf2; --pending: #8a5a00; --pending-bg: #fdf3dd; --wording: #2e7d55;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #12181d; --ink: #e8eef2; --muted: #a3b1bc; --rule: #33414c;
+  --panel: #1b242b; --accent: #6cc0da; --accent-soft: #1d3a46; --pending: #f0c36a; --pending-bg: #3a2d12; --wording: #7fd1a4; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --paper: #12181d; --ink: #e8eef2; --muted: #a3b1bc; --rule: #33414c;
+  --panel: #1b242b; --accent: #6cc0da; --accent-soft: #1d3a46; --pending: #f0c36a; --pending-bg: #3a2d12; --wording: #7fd1a4; color-scheme: dark }
+body { background: var(--paper); color: var(--ink); font-family: var(--serif); font-size: 16.5px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 40px 64px; }
+article { max-width: 880px; margin: 0 auto; display: grid; gap: 24px; }
+h1 { font-family: var(--sans); font-weight: 600; font-size: clamp(26px, 4vw, 34px); line-height: 1.18; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+.byline { font-family: var(--sans); font-size: 14px; color: var(--muted); margin: 10px 0 0; }
+.status { font-family: var(--sans); font-size: 13px; color: var(--pending); background: var(--pending-bg); display: inline-block; padding: 3px 9px; border-radius: 4px; margin-top: 12px; }
+.abstract { background: var(--panel); padding: 20px 24px; border-radius: 6px; }
+.abstract h2 { margin-top: 0; }
+.abstract p { margin: 0; }
+h2 { font-family: var(--sans); font-size: 16px; font-weight: 600; margin: 1.3em 0 0.4em; color: var(--accent); break-after: avoid; }
+h3 { font-family: var(--sans); font-size: 14.5px; font-weight: 600; margin: 1em 0 0.3em; break-after: avoid; }
+p { margin: 0 0 0.75em; hyphens: auto; }
+.columns { columns: 2; column-gap: 34px; }
+.columns > :first-child { margin-top: 0; }
+.columns table { break-inside: avoid; }
+.pending { color: var(--pending); background: var(--pending-bg); padding: 0 4px; border-radius: 3px; font-family: var(--sans); font-size: 0.86em; }
+figure { margin: 0; }
+figcaption { font-family: var(--sans); font-size: 13px; color: var(--muted); line-height: 1.45; margin-top: 8px; }
+figcaption b { color: var(--ink); font-weight: 600; }
+.figscroll { overflow-x: auto; }
+svg text { font-family: var(--sans); fill: var(--ink); font-size: 13px; }
+svg text.sub { fill: var(--muted); font-size: 12px; }
+svg .box { fill: var(--panel); stroke: var(--rule); }
+svg .change { fill: var(--accent-soft); stroke: var(--accent); }
+svg .line { stroke: var(--muted); fill: none; stroke-width: 1; }
+svg .grid { stroke: var(--rule); fill: none; stroke-width: 1; }
+svg .arrow { fill: var(--muted); }
+.panels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px; }
+.wide { grid-column: 1 / -1; }
+.panel { min-width: 0; }
+table { border-collapse: collapse; width: 100%; font-family: var(--sans); font-size: 12.5px; line-height: 1.35; margin: 0.4em 0 0.9em; font-variant-numeric: tabular-nums; }
+th { text-align: left; font-weight: 600; border-bottom: 1px solid var(--ink); padding: 3px 6px 3px 0; }
+td { border-bottom: 1px solid var(--rule); padding: 3px 6px 3px 0; vertical-align: top; }
+.refs { font-size: 13.5px; line-height: 1.4; columns: 2; column-gap: 34px; }
+.refs p { margin: 0 0 0.45em; break-inside: avoid; hyphens: none; }
+a { color: var(--accent); }
+@media (max-width: 720px) { .columns, .refs { columns: 1; } .panels { grid-template-columns: minmax(0, 1fr); } .wide { grid-column: auto; overflow-x: auto; } }
+.plain { background: transparent; }
+.tl { font-family: var(--sans); font-size: 13px; font-weight: 600; }
+</style>
+
+<article>
+<header>
+  <h1>What steers an LLM's next experiment? Results, names, and wording in reaction optimization</h1>
+  <p class="byline">Cooper Shea. Draft of 8 November 2026. Analysis code and text prepared with Claude Code.</p>
+  <span class="status">Working draft. One model, measured chemistry data, no human participants.</span>
+</header>
+
+<section class="abstract">
+  <h2>Abstract</h2>
+  <p>Bayesian optimization (BO) has outperformed expert chemists at reaction optimization, and scientists now increasingly ask language models what to try next. Whether that brings BO-quality decisions is an open question. A second question concerns direction. Language models reflect what has already been reported, so a person working with one may be drawn toward canonical answers, which is a risk when those answers are wrong, thinly supported, or slightly beside the point. Someone who knows less may sometimes search more freely, a possibility we raise here and do not test. Before testing either question, we measured what steers a model's suggestion. On 160 histories from measured reaction grids, we asked Claude Opus 5.5 for the next three experiments, then changed one input at a time. Repeating the request changed the picks by 0.15 on a 0 to 1 scale. A different prompt changed them by 0.17, advice by 0.24, a hunch by 0.26, coded or swapped names by 0.41 and 0.46, and scrambled results by 0.46. The influence of results grew with the amount of data, and the influence of names declined. Advice to rely on the data shifted picks toward the results shown without improving their true rank. All of these results describe one model, and many of the questions would be better tested with experts and novices in these fields. We did not test BO itself or any effect on human reasoning, and propose both as next steps.</p>
+</section>
+
+<div class="columns">
+<h2>1. The claim</h2>
+<p>Experimental optimization is often done by intuition and by changing one factor at a time. Shields et al. [1] tested this directly. Fifty chemists and engineers played an online game on a fully measured direct arylation grid, choosing five experiments per round, and BO outperformed them in efficiency and consistency. The released data include BO runs started from the players' own first choices. In the released data [2], by 25 experiments experts averaged a best yield of 91.7% and BO 96.7%, and 50% of experts versus 86% of BO runs had reached 90% (Figure 1). If trained experts have something to learn from BO, most practitioners have more.</p>
+<p>BO is hard to adopt, however. It needs code, statistical judgment, and setup. Many researchers will instead paste their results into a chat and ask what to try next.</p>
+
+<h2>2. The question</h2>
+<p>Much problem solving interpolates between known results, and language models are strong at this because they are trained on what has already been reported. Discovery sometimes depends on the opposite: a result outside that distribution, where the canonical answer is wrong, rests on thin evidence, or slightly misses the point. A tool that steers people toward the canonical answer could help in familiar territory and hurt at the frontier. Paradigm shifts have often come from outside the accepted picture, which raises the possibility that knowing less, or reading less of the existing work first, sometimes leads to a better search. We state this as a hypothesis.</p>
+<p>How do language models affect this kind of decision? When do they enable better search, and when do they pull a person toward what is already believed? A model's suggestion can draw on the results it is shown, on knowledge from training, and on how the question is phrased. We start by measuring the relative influence of each, which covers the model's side of that interaction only.</p>
+
+<h2>3. Prior work and the gap</h2>
+<table>
+<thead><tr><th>Work</th><th>Conclusion</th><th>Gap left</th></tr></thead>
+<tbody>
+<tr><td>Shields 2021 [1]</td><td>BO beat experts on one reaction grid</td><td>No LLMs</td></tr>
+<tr><td>Gupta 2025 [3]</td><td>LLM agents barely reacted to shuffled feedback on gene tasks, and classical methods beat them</td><td>Older models. No test of names or wording</td></tr>
+<tr><td>MacKnight 2025 [4]</td><td>LLMs matched or exceeded BO on five single-objective reaction grids. BO kept the advantage on the one multi-objective case</td><td>Credits prior knowledge, with no condition that removes it</td></tr>
+<tr><td>M&uuml;ller 2026 [5]</td><td>Agents can run BO campaigns on real platforms. Scripted loops beat step-by-step tool calls</td><td>All arms already use BO, so plain chat is not compared</td></tr>
+<tr><td>Cooper 2026 [6]</td><td>An expert team's best catalyst matched the stronger LLM run within error and beat the weaker one, on one problem. The final best was nearly absent from LLM proposals made without feedback</td><td>One problem, no test of inputs</td></tr>
+<tr><td>Zhang 2026 [7]</td><td>Experimental design was the most sycophancy-prone task studied</td><td>Single-turn, scored on text</td></tr>
+</tbody></table>
+<p>In the papers we read, we did not find a controlled measurement of how results, names, and wording each move an LLM's choice of next experiment. A related paper [8] could not be accessed, so this claim is provisional.</p>
+
+<h2>4. What we tested</h2>
+<p>We used complete measured grids with open licenses: direct arylation (1,728 yields) [1], a Suzuki coupling table (3,696 reactions) from the EDBO repository [9], oil palm delignification (64 conditions in duplicate) [10], and blocks of a C&ndash;N coupling screen [11], of which the first 10 of 29 eligible blocks were used. Each of the four sources contributed equally.</p>
+<p>One unit is a world, a random history of 0, 3, 6, or 12 measured results, and a prompt from a pool of 40 varied templates. Each unit was sent to Opus 5.5 once per condition (Figure 2), with no tools, 160 units and 1,720 decisions in all. Each comparison changes one input. Sampling and analysis were fixed before this run, after earlier exploratory work on the design.</p>
+<p>We report change in picks (total-variation distance between the option distributions of two sets of three picks, averaged over settings), true rank (grid percentile of the picks), and agreement with the best option in the results shown and with the model's own no-results ranking.</p>
+</div>
+
+<figure class="plain"><div class="figscroll"><svg viewBox="0 0 520 215" width="100%" role="img" aria-label="Best yield so far against experiments for expert players, BO, and a small Opus pilot on the Shields grid."><path class="grid" d="M44.0 16.0 V170.0 H330.0"/><text class="sub" x="38.0" y="174.0" text-anchor="end">50</text><text class="sub" x="38.0" y="97.0" text-anchor="end">75</text><text class="sub" x="38.0" y="20.0" text-anchor="end">100</text><text class="sub" x="101.2" y="185.0" text-anchor="middle">5</text><text class="sub" x="158.4" y="185.0" text-anchor="middle">10</text><text class="sub" x="215.6" y="185.0" text-anchor="middle">15</text><text class="sub" x="272.8" y="185.0" text-anchor="middle">20</text><text class="sub" x="330.0" y="185.0" text-anchor="middle">25</text><text class="sub" x="187.0" y="203.0" text-anchor="middle">Experiments run</text><text class="sub" x="44.0" y="10">Best yield so far (%)</text><polyline points="101.2,124.4 158.4,78.3 215.6,62.1 272.8,51.6 330.0,41.6" fill="none" stroke="var(--pending)" stroke-width="2"/><path d="M101.2 144.7 V106.4" stroke="var(--pending)" fill="none"/><circle cx="101.2" cy="124.4" r="3" fill="var(--pending)"/><path d="M158.4 91.1 V66.5" stroke="var(--pending)" fill="none"/><circle cx="158.4" cy="78.3" r="3" fill="var(--pending)"/><path d="M215.6 73.0 V52.2" stroke="var(--pending)" fill="none"/><circle cx="215.6" cy="62.1" r="3" fill="var(--pending)"/><path d="M272.8 59.8 V43.7" stroke="var(--pending)" fill="none"/><circle cx="272.8" cy="51.6" r="3" fill="var(--pending)"/><path d="M330.0 48.9 V34.9" stroke="var(--pending)" fill="none"/><circle cx="330.0" cy="41.6" r="3" fill="var(--pending)"/><text class="sub" x="338.0" y="53.6">Experts (50)</text><polyline points="101.2,124.4 158.4,96.1 215.6,61.0 272.8,42.2 330.0,26.0" fill="none" stroke="var(--accent)" stroke-width="2"/><path d="M101.2 144.2 V105.9" stroke="var(--accent)" fill="none"/><circle cx="101.2" cy="124.4" r="3" fill="var(--accent)"/><path d="M158.4 112.6 V80.9" stroke="var(--accent)" fill="none"/><circle cx="158.4" cy="96.1" r="3" fill="var(--accent)"/><path d="M215.6 73.4 V49.9" stroke="var(--accent)" fill="none"/><circle cx="215.6" cy="61.0" r="3" fill="var(--accent)"/><path d="M272.8 52.6 V33.2" stroke="var(--accent)" fill="none"/><circle cx="272.8" cy="42.2" r="3" fill="var(--accent)"/><path d="M330.0 31.2 V21.5" stroke="var(--accent)" fill="none"/><circle cx="330.0" cy="26.0" r="3" fill="var(--accent)"/><text class="sub" x="338.0" y="22.0">BO from the same starts</text><polyline points="112.6,81.6 181.3,31.2 249.9,30.1 318.6,29.2" fill="none" stroke="var(--muted)" stroke-width="2" stroke-dasharray="3 3"/><path d="M112.6 121.9 V44.4" stroke="var(--muted)" fill="none"/><circle cx="112.6" cy="81.6" r="3" fill="var(--muted)"/><path d="M181.3 47.5 V16.1" stroke="var(--muted)" fill="none"/><circle cx="181.3" cy="31.2" r="3" fill="var(--muted)"/><path d="M249.9 44.0 V16.1" stroke="var(--muted)" fill="none"/><circle cx="249.9" cy="30.1" r="3" fill="var(--muted)"/><path d="M318.6 43.2 V16.0" stroke="var(--muted)" fill="none"/><circle cx="318.6" cy="29.2" r="3" fill="var(--muted)"/><text class="sub" x="338.0" y="33.2">Opus 5.5 pilot (6)</text></svg></div><figcaption><b>Figure 1.</b> Best yield so far on the direct arylation grid. Expert and BO data are from the published game [1, 2]. Players could stop early, and keep their best result. The Opus points are a 6-run exploratory pilot in batches of 3, on a grid the model named as a known dataset, so they are illustrative. Intervals are 95%.</figcaption></figure>
+<figure><div class="figscroll"><svg viewBox="0 0 860 300" width="100%" role="img" aria-label="Design of one unit. A measured grid supplies random past results. The same results go into a reference request and into a request with one change. Claude picks three experiments for each, and the two sets are compared.">
+    <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L9 5L1 9z" class="arrow"/></marker></defs>
+    <rect class="box" x="10" y="100" width="150" height="64" rx="5"/><text x="85" y="127" text-anchor="middle">Measured grid</text><text class="sub" x="85" y="147" text-anchor="middle">0, 3, 6, or 12 results</text>
+    <path class="line" d="M160 132 H190 V62 H220" marker-end="url(#ah)"/><path class="line" d="M190 132 V202 H220" marker-end="url(#ah)"/>
+    <rect class="box" x="222" y="30" width="230" height="64" rx="5"/><text x="337" y="57" text-anchor="middle">Reference request</text><text class="sub" x="337" y="77" text-anchor="middle">Real names, true data</text>
+    <rect class="change" x="222" y="170" width="230" height="64" rx="5"/><text x="337" y="197" text-anchor="middle">One change</text><text class="sub" x="337" y="217" text-anchor="middle">Nothing, data, names, or wording</text>
+    <path class="line" d="M452 62 H500 V118 H530" marker-end="url(#ah)"/><path class="line" d="M452 202 H500 V146 H530" marker-end="url(#ah)"/>
+    <rect class="box" x="532" y="100" width="130" height="64" rx="5"/><text x="597" y="127" text-anchor="middle">Next 3 picks</text><text class="sub" x="597" y="147" text-anchor="middle">Opus 5.5, per request</text>
+    <path class="line" d="M662 132 H700" marker-end="url(#ah)"/>
+    <rect class="box" x="702" y="60" width="150" height="144" rx="5"/><text x="777" y="88" text-anchor="middle">Compare</text><text class="sub" x="777" y="116" text-anchor="middle">Change in picks</text><text class="sub" x="777" y="140" text-anchor="middle">True rank</text><text class="sub" x="777" y="164" text-anchor="middle">Follows results</text><text class="sub" x="777" y="188" text-anchor="middle">Follows prior</text>
+    <text class="sub" x="337" y="270" text-anchor="middle">Same history, same prompt template, and same world in both requests, except for the one change.</text>
+  </svg></div><figcaption><b>Figure 2.</b> One unit of the replay study. Because the history is shared, each comparison isolates a single input. Repeating the reference request gives a noise floor.</figcaption></figure>
+
+<div class="panels">
+  <figure class="panel"><svg viewBox="0 0 300 235" width="100%" role="img" aria-label="Change in picks by input with intervals. Noise floor marked."><path class="grid" d="M96.0 12 V195 H280.0"/><text class="sub" x="96.0" y="210" text-anchor="middle">0.0</text><text class="sub" x="157.3" y="210" text-anchor="middle">0.2</text><text class="sub" x="218.7" y="210" text-anchor="middle">0.4</text><text class="sub" x="280.0" y="210" text-anchor="middle">0.6</text><text class="sub" x="188.0" y="228" text-anchor="middle">Change in picks</text><path d="M141.7 12 V195" stroke="var(--muted)" stroke-dasharray="3 3" fill="none"/><text class="sub" x="89.0" y="28" text-anchor="end">Ask again</text><path d="M135.7 24 H148.0" stroke="var(--accent)" stroke-width="1.5" fill="none"/><circle cx="141.7" cy="24" r="3.5" fill="var(--accent)"/><text class="sub" x="153.0" y="28">0.15</text><text class="sub" x="89.0" y="53" text-anchor="end">Scrambled</text><path d="M225.1 49 H246.0" stroke="var(--accent)" stroke-width="1.5" fill="none"/><circle cx="235.7" cy="49" r="3.5" fill="var(--accent)"/><text class="sub" x="251.0" y="53">0.46</text><text class="sub" x="89.0" y="78" text-anchor="end">Coded</text><path d="M214.0 74 H228.3" stroke="var(--accent)" stroke-width="1.5" fill="none"/><circle cx="221.3" cy="74" r="3.5" fill="var(--accent)"/><text class="sub" x="233.3" y="78">0.41</text><text class="sub" x="89.0" y="103" text-anchor="end">Swapped</text><path d="M228.7 99 H244.2" stroke="var(--accent)" stroke-width="1.5" fill="none"/><circle cx="236.5" cy="99" r="3.5" fill="var(--accent)"/><text class="sub" x="249.2" y="103">0.46</text><text class="sub" x="89.0" y="128" text-anchor="end">Prompt</text><path d="M142.7 124 H153.4" stroke="var(--accent)" stroke-width="1.5" fill="none"/><circle cx="148.2" cy="124" r="3.5" fill="var(--accent)"/><text class="sub" x="158.4" y="128">0.17</text><text class="sub" x="89.0" y="153" text-anchor="end">Hunch</text><path d="M168.5 149 H182.4" stroke="var(--accent)" stroke-width="1.5" fill="none"/><circle cx="175.6" cy="149" r="3.5" fill="var(--accent)"/><text class="sub" x="187.4" y="153">0.26</text><text class="sub" x="89.0" y="178" text-anchor="end">Advice</text><path d="M165.2 174 H173.2" stroke="var(--accent)" stroke-width="1.5" fill="none"/><circle cx="169.3" cy="174" r="3.5" fill="var(--accent)"/><text class="sub" x="178.2" y="178">0.24</text></svg><figcaption><b>Figure 3.</b> Change in picks by input, with 95% intervals. The dashed line is the noise floor.</figcaption></figure>
+  <figure class="panel"><svg viewBox="0 0 300 200" width="100%" role="img" aria-label="Change in picks against results shown for data, names, wording, and noise."><path class="grid" d="M42.0 14.0 V160.0 H232.0"/><text class="sub" x="36.0" y="164.0" text-anchor="end">0.0</text><text class="sub" x="36.0" y="122.3" text-anchor="end">0.2</text><text class="sub" x="36.0" y="80.6" text-anchor="end">0.4</text><text class="sub" x="36.0" y="38.9" text-anchor="end">0.6</text><text class="sub" x="42.0" y="175.0" text-anchor="middle">0</text><text class="sub" x="105.3" y="175.0" text-anchor="middle">3</text><text class="sub" x="168.7" y="175.0" text-anchor="middle">6</text><text class="sub" x="232.0" y="175.0" text-anchor="middle">12</text><text class="sub" x="137.0" y="193.0" text-anchor="middle">Results shown</text><polyline points="105.3,85.4 168.7,66.3 232.0,43.3" fill="none" stroke="var(--accent)" stroke-width="1.8"/><path d="M105.3 97.5 V73.1" stroke="var(--accent)" fill="none"/><circle cx="105.3" cy="85.4" r="3" fill="var(--accent)"/><path d="M168.7 76.6 V55.0" stroke="var(--accent)" fill="none"/><circle cx="168.7" cy="66.3" r="3" fill="var(--accent)"/><path d="M232.0 54.2 V32.8" stroke="var(--accent)" fill="none"/><circle cx="232.0" cy="43.3" r="3" fill="var(--accent)"/><text class="sub" x="239.0" y="47.3">Data</text><polyline points="42.0,51.7 105.3,60.6 168.7,78.4 232.0,87.9" fill="none" stroke="var(--pending)" stroke-width="1.8"/><path d="M42.0 56.9 V46.2" stroke="var(--pending)" fill="none"/><circle cx="42.0" cy="51.7" r="3" fill="var(--pending)"/><path d="M105.3 66.3 V55.2" stroke="var(--pending)" fill="none"/><circle cx="105.3" cy="60.6" r="3" fill="var(--pending)"/><path d="M168.7 85.8 V71.3" stroke="var(--pending)" fill="none"/><circle cx="168.7" cy="78.4" r="3" fill="var(--pending)"/><path d="M232.0 94.6 V80.9" stroke="var(--pending)" fill="none"/><circle cx="232.0" cy="87.9" r="3" fill="var(--pending)"/><text class="sub" x="239.0" y="91.9">Names</text><polyline points="42.0,101.9 105.3,111.1 168.7,114.6 232.0,120.9" fill="none" stroke="var(--wording)" stroke-width="1.8"/><path d="M42.0 105.3 V98.4" stroke="var(--wording)" fill="none"/><circle cx="42.0" cy="101.9" r="3" fill="var(--wording)"/><path d="M105.3 115.2 V107.0" stroke="var(--wording)" fill="none"/><circle cx="105.3" cy="111.1" r="3" fill="var(--wording)"/><path d="M168.7 118.4 V110.5" stroke="var(--wording)" fill="none"/><circle cx="168.7" cy="114.6" r="3" fill="var(--wording)"/><path d="M232.0 124.5 V117.3" stroke="var(--wording)" fill="none"/><circle cx="232.0" cy="120.9" r="3" fill="var(--wording)"/><text class="sub" x="239.0" y="124.9">Wording</text><polyline points="42.0,123.0 105.3,133.0 168.7,126.9 232.0,132.8" fill="none" stroke="var(--muted)" stroke-width="1.8" stroke-dasharray="3 3"/><path d="M42.0 131.1 V115.7" stroke="var(--muted)" fill="none"/><circle cx="42.0" cy="123.0" r="3" fill="var(--muted)"/><path d="M105.3 140.6 V124.7" stroke="var(--muted)" fill="none"/><circle cx="105.3" cy="133.0" r="3" fill="var(--muted)"/><path d="M168.7 133.7 V119.6" stroke="var(--muted)" fill="none"/><circle cx="168.7" cy="126.9" r="3" fill="var(--muted)"/><path d="M232.0 139.4 V125.8" stroke="var(--muted)" fill="none"/><circle cx="232.0" cy="132.8" r="3" fill="var(--muted)"/><text class="sub" x="239.0" y="136.8">Noise</text></svg><figcaption><b>Figure 4.</b> Change in picks against the number of results shown. Names pools coded and swapped. Wording pools prompt, hunch, and advice.</figcaption></figure>
+</div>
+
+<div class="columns">
+<h2>5. Results</h2>
+<p>All 1,720 decisions were usable. Repeating the same request changed the picks by 0.15. A different prompt changed them by 0.17, which exceeds the noise floor by 0.02 (interval 0.00 to 0.04). Advice, hunches, names, and scrambled results each changed picks by more (Figure 3).</p>
+<p>Scrambling mattered more as data accumulated, rising from 0.36 at 3 results to 0.56 at 12. Names mattered less, falling from 0.52 with no results to 0.35 at 12 (Figure 4). Sources differed: on the C&ndash;N blocks, names moved picks about twice as far as scrambling, the reverse of the other three (Table 1).</p>
+<p>Evidence-first and audit advice raised agreement with the best observed option and lowered agreement with the model's prior, but true rank fell by about 0.02 (Table 2).</p>
+<p>The model's no-results rankings tracked measured option quality more often than not. Mean Spearman correlation with measured option means was 0.72 on direct arylation, 0.64 on Suzuki, and 0.38 on the C&ndash;N blocks, and its top choice matched the best option in 60%, 60%, and 27% of settings. On oil palm, its ranking of reaction time ran opposite to the measurements (&minus;0.52). It named the source of direct arylation and Suzuki data correctly in every try.</p>
+<p><b class="tl">Table 1.</b> Mean change in picks by input and source.</p>
+<table><thead><tr><th>Input</th><th>Shields</th><th>Suzuki</th><th>Oil palm</th><th>Cernak</th></tr></thead><tbody><tr><td>Ask again</td><td>0.14</td><td>0.13</td><td>0.16</td><td>0.17</td></tr><tr><td>Scrambled</td><td>0.47</td><td>0.59</td><td>0.48</td><td>0.29</td></tr><tr><td>Coded</td><td>0.35</td><td>0.35</td><td>0.26</td><td>0.67</td></tr><tr><td>Swapped</td><td>0.45</td><td>0.34</td><td>0.35</td><td>0.70</td></tr><tr><td>Prompt</td><td>0.15</td><td>0.15</td><td>0.18</td><td>0.20</td></tr><tr><td>Hunch</td><td>0.27</td><td>0.21</td><td>0.21</td><td>0.34</td></tr><tr><td>Advice</td><td>0.24</td><td>0.19</td><td>0.20</td><td>0.33</td></tr></tbody></table>
+<p><b class="tl">Table 2.</b> Paired difference from the reference request, with 95% intervals.</p>
+<table><thead><tr><th>Strategy</th><th>True rank</th><th>Follows results</th><th>Follows prior</th></tr></thead><tbody><tr><td>Evidence first</td><td>−0.02 [−0.04, −0.01]</td><td>0.04 [0.02, 0.07]</td><td>−0.06 [−0.08, −0.05]</td></tr><tr><td>Audit assumptions</td><td>−0.02 [−0.04, −0.01]</td><td>0.09 [0.06, 0.12]</td><td>−0.08 [−0.09, −0.07]</td></tr><tr><td>Caution</td><td>−0.01 [−0.03, 0.01]</td><td>0.03 [0.00, 0.05]</td><td>−0.07 [−0.09, −0.06]</td></tr><tr><td>No rationale</td><td>−0.00 [−0.02, 0.01]</td><td>−0.05 [−0.07, −0.03]</td><td>0.01 [−0.01, 0.02]</td></tr></tbody></table>
+
+<h2>6. Significance</h2>
+<p>These results suggest three practical points, each to be confirmed against outcomes. Rewording a request changed little beyond ordinary repetition. A user's results strongly influenced picks once several were available, so early suggestions lean more on the model's learned associations than later ones. Telling a model to rely on the data changed its choices but did not improve them here, so that advice alone is unlikely to substitute for an actual optimizer.</p>
+<p>For model developers, shuffled-feedback and mislabeled-option tests are cheap checks of whether a model updates on evidence. For scientists, the Shields result suggests a practical default: use BO or a BO tool when the budget is small and the decision matters.</p>
+
+<h2>7. Limits and next steps</h2>
+<p>This study used one model, and chemistry data, two of whose grids the model recognizes. Replay measures single decisions on random histories. It does not measure a sequential optimization loop or what people do. The Figure 1 comparison spans different batch sizes and sample sizes.</p>
+<p>Most of these questions would be better answered with people. Whether a suggestion steers reasoning, helps a novice, or misleads an expert can only be measured by giving suggestions to novices and experts in the field and observing what they do. We did not have access to such participants, so Claude Opus 5.5 is the only subject of the replay study. Its results describe one model's behavior and are not estimates of how scientists reason. The practical points in Section 6 are suggestions to test with practitioners.</p>
+<p>Three studies follow directly. First, a head-to-head search on these grids: plain chat asked for help, chat asked for BO, the model with code execution, and the model with a real BO tool, scored against BO alone. Second, simulations validated against measured data, which would allow unlimited sequential experiments in settings the model has not seen. Third, a study with people guided in these different ways, using the Shields game as a template, since it is the only design here able to test whether model suggestions steer human reasoning.</p>
+
+<h2>Data and code</h2>
+<p>Grid sources, the prompt pool, the unit table, and analysis code are listed in <code>data/SOURCES.md</code> and the project repository. Every request and response is logged.</p>
+</div>
+
+<section>
+  <h2>References</h2>
+  <div class="refs">
+    <p>[1] Shields BJ, Stevens J, Li J, et al. Bayesian reaction optimization as a tool for chemical synthesis. Nature 590, 2021.</p>
+    <p>[2] Shields BJ. EvML. github.com/b-shields/EvML.</p>
+    <p>[3] Gupta R, Hartford J, Liu B. LLMs for Bayesian optimization in scientific domains: are we there yet? Findings of EMNLP, 2025.</p>
+    <p>[4] MacKnight R, Regio JE, Ethier JG, Baldwin LA, Gomes G. Pre-trained knowledge elevates large language models beyond traditional chemical reaction optimizers. arXiv:2509.00103, 2025.</p>
+    <p>[5] M&uuml;ller M, et al. La Agente &Oacute;ptima: Towards agentic self-driving laboratories. arXiv:2609.04564, 2026.</p>
+    <p>[6] Cooper AI, Yeow QJ, Xiao Z, et al. Large language models do not replace chemists in a closed-loop catalysis experiment. Research Square, 2026.</p>
+    <p>[7] Zhang Y, Hua C, Salapaka MV, Kang D. When helpfulness becomes scientific sycophancy: triggering and mitigating LLM failures on flawed scientific premises. Findings of EMNLP, 2026.</p>
+    <p>[8] Ciss&eacute; A, Cooper ME, Zhu M, et al. Can we automate scientific reasoning in closed-loop experiments using large language models? Digital Discovery 5(3), 2026.</p>
+    <p>[9] EDBO repository, github.com/b-shields/edbo, experiments/data/suzuki. The table's original source is unconfirmed. It may derive from Perera et al., Science 2018, which reports 5,760 reactions.</p>
+    <p>[10] Aldana Rico A, Bustillo Maury J. Experimental and model-derived dataset for subcritical alkaline delignification of oil palm empty fruit bunches. Zenodo 23953649, 2026.</p>
+    <p>[11] Das J, Zhang X, Tan Y, et al. A 50,688-reaction data set reveals general ligands and mechanistic diversity in C&ndash;N couplings. J. Am. Chem. Soc., doi:10.1021/jacs.6c05959.</p>
+  </div>
+</section>
+</article>

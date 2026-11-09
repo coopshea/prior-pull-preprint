@@ -1,0 +1,44 @@
+probe,world,rep,stop,parsed,recognized,confidence,correct_source,guess,shown,asked,exact_rows,exact_nonzero,true_nonzero,conditions_only,semantic,pred_spearman,marginal_spearman,looks_wrong
+decoy,decoy,0,end_turn,True,False,0.1,False,"This doesn't match a dataset I know. The reagent names (NeoDalPhos, VentaPhos, Fluorocumene, Tetrazene-Me, Cs-Ortholate) are not real chemicals, so the data looks synthetic or obfuscated. Its layout (base, ligand, solvent and temperature mapped to yield) resembles reaction-optimization benchmarks such as the Shields et al. 2018 (Doyle group, Nature) Pd-catalyzed direct arylation Bayesian optimization dataset. That resemblance is only structural, not an identification.",,,,,,,,,,
+decoy,decoy,1,end_turn,True,False,0.1,False,"This does not match any dataset I know. The reagent names (NeoDalPhos, TetraMorph-P, Fluorocumene, Tetrazene-Me, Cs-Ortholate) are not real chemicals, so this looks like a synthetic or obfuscated dataset. Its structure (base, ligand, solvent and temperature versus yield) resembles reaction-optimization benchmarks such as the Doyle group's direct arylation dataset from Shields et al., Nature 2021 (Bayesian reaction optimization). That resemblance is only in the format, not a recognized source.",,,,,,,,,,
+decoy,decoy,2,end_turn,True,False,0.1,False,"Not recognized. The reagent names (Na-Tribenzate, NeoDalPhos, TetraMorph-P, Fluorocumene, CPME-3, etc.) appear fictional or obfuscated. This looks like a synthetic reaction-optimization benchmark, perhaps loosely modeled on direct arylation or Buchwald-Hartwig yield datasets (e.g., Shields et al. 2021 Bayesian optimization, Ahneman et al. 2018) used for Bayesian optimization tutorials, but I can't tie it to a specific source.",,,,,,,,,,
+decoy,decoy,3,end_turn,True,False,0.1,False,"I don't recognize this specific dataset. The reagent names (NeoDalPhos, TetraMorph-P, Fluorocumene, Tetrazene-Me, Cs-Ortholate) are not real chemicals, so it looks synthetic or obfuscated. Its structure (Base × Ligand × Solvent × Temperature → yield) resembles reaction-optimization benchmarks such as the Shields et al. 2018 (Doyle group, Nature) direct arylation dataset used for Bayesian optimization, but that link is only a guess.",,,,,,,,,,
+decoy,decoy,4,end_turn,True,False,0.1,False,"Not a dataset I can identify. The reagent names (NeoDalPhos, VentaPhos, Fluorocumene, Tetrazene-Me, Cs-Ortholate) are not real chemicals, so this is probably a synthetic or obfuscated table. Its base/ligand/solvent/temperature layout resembles reaction-optimization benchmarks such as the Shields et al. 2018 (Doyle group, Nature) direct arylation dataset, but that is only a structural resemblance.",,,,,,,,,,
+P1,shields,0,end_turn,True,True,0.9,True,"Direct arylation (C–H functionalization) dataset from Shields et al., 'Bayesian reaction optimization as a tool for chemical synthesis', Nature 2021 (Doyle group, Princeton; EDBO). Variables are base (KOAc/KOPiv/CsOAc/CsOPiv), 12 phosphine ligands, 4 solvents (DMAc, BuOAc, p-xylene, BuCN), 3 concentrations, and 3 temperatures, for 1,728 reactions.",,,,,,,,,,
+P1,shields,1,end_turn,True,True,0.9,True,"Direct arylation (C–H functionalization) dataset from Shields et al., 'Bayesian reaction optimization as a tool for chemical synthesis', Nature 2021 (Doyle group, Princeton; EDBO). It covers bases CsOPiv/KOPiv/CsOAc/KOAc, 12 phosphine ligands, solvents DMAc/BuOAc/p-Xylene/BuCN, three concentrations and three temperatures, 1728 reactions in total.",,,,,,,,,,
+P1,shields,2,end_turn,True,True,0.9,True,"Direct arylation (C–H functionalization) reaction optimization dataset from Shields et al., 'Bayesian reaction optimization as a tool for chemical synthesis', Nature 2021 (Doyle group, Princeton; EDBO). It covers bases CsOPiv/KOPiv/CsOAc/KOAc, 12 phosphine ligands, 4 solvents, 3 concentrations and 3 temperatures.",,,,,,,,,,
+P1,shields,3,end_turn,True,True,0.9,True,"Direct arylation (C–H functionalization) dataset from Shields et al., 'Bayesian reaction optimization as a tool for chemical synthesis', Nature 2021 (Doyle group, Princeton; EDBO). It covers 4 bases, 12 ligands, 4 solvents, 3 concentrations and 3 temperatures, for 1728 reactions in total.",,,,,,,,,,
+P1,shields,4,end_turn,True,True,0.9,True,"Direct arylation (C–H functionalization) dataset from Shields et al., 'Bayesian reaction optimization as a tool for chemical synthesis', Nature 2021 (Doyle group, Princeton). It covers 1,728 Pd-catalyzed reactions varying base, ligand, solvent, concentration and temperature, and is used in the EDBO benchmarks.",,,,,,,,,,
+P2,shields,0,end_turn,True,False,0.05,False,"Unrecognized; it looks like a multi-factor designed experiment (4×12×4×3×3 factors) with a non-negative, zero-inflated response, possibly agricultural or biological, but I can't identify the specific paper or source.",,,,,,,,,,
+P2,shields,1,end_turn,True,False,0.05,False,"Unknown; it looks like a multi-factor designed experiment (factors with 4, 12, 4, 3 and 3 levels) with a nonnegative, zero-inflated response such as yield or disease severity, but I can't identify a specific source.",,,,,,,,,,
+P2,shields,2,end_turn,True,False,0.05,False,"Not recognized. The layout looks like a factorial experimental design with yield or response data: 4 levels for x1 and x3, about 11 levels for x2, and 3 levels each for x4 and x5. The many zeros suggest something like germination or survival counts, but I can't identify a specific source.",,,,,,,,,,
+P2,shields,3,end_turn,True,False,0.05,False,"Not recognized. It looks like a factorial or designed experiment with four categorical factors (4, ~12, 4 and 3 levels) and a non-negative response containing many zeros, possibly an agricultural or ecological dataset, but I can't identify the specific source.",,,,,,,,,,
+P2,shields,4,end_turn,True,False,0.05,False,"Unrecognized. It looks like a factorial or split-plot agricultural experiment, perhaps disease or yield percentages across 4 blocks, 12 treatments or varieties, 4 levels, and two 3-level factors, but I can't name a specific source.",,,,,,,,,,
+P3,shields,0,end_turn,True,,,,,30.0,20.0,4.0,0.0,16.0,20.0,,,,
+P3,shields,1,end_turn,True,,,,,30.0,20.0,3.0,0.0,16.0,18.0,,,,
+P3,shields,2,end_turn,True,,,,,30.0,20.0,3.0,0.0,16.0,18.0,,,,
+P4,shields,0,end_turn,True,,,,,,,,,,,S0,0.028053224071253925,0.5342657342657342,
+P4,shields,1,end_turn,True,,,,,,,,,,,S0,0.006575584580693452,0.5706293706293707,
+P4,shields,2,end_turn,True,,,,,,,,,,,S0,0.38093358538044964,0.6713286713286714,
+P4,shields,3,end_turn,True,,,,,,,,,,,S0,0.08379115654958598,0.5636363636363637,
+P4,shields,4,end_turn,True,,,,,,,,,,,S0,0.24493440241588582,0.6162237762237762,
+P4,shields,0,end_turn,True,,,,,,,,,,,S1,0.20627456091955654,0.16755244755244755,
+P4,shields,1,end_turn,True,,,,,,,,,,,S1,0.17410502543814302,0.16755244755244755,
+P4,shields,2,end_turn,True,,,,,,,,,,,S1,0.2469555583363615,0.16895104895104898,
+P4,shields,3,end_turn,True,,,,,,,,,,,S1,0.15081719736319654,0.16335664335664338,
+P4,shields,4,end_turn,True,,,,,,,,,,,S1,0.21648812378487817,0.16755244755244755,
+P4,shields,0,end_turn,True,,,,,,,,,,,S2,-0.07693240092760822,-0.6036363636363636,
+P4,shields,1,end_turn,True,,,,,,,,,,,S2,-0.1307973634374599,-0.5916083916083916,
+P4,shields,2,end_turn,True,,,,,,,,,,,S2,-0.17599717178156654,-0.6335664335664335,
+P4,shields,3,end_turn,True,,,,,,,,,,,S2,-0.2239080932135738,-0.6497902097902097,
+P4,shields,4,end_turn,True,,,,,,,,,,,S2,-0.19879006482331918,-0.6111888111888112,
+P5,shields,0,end_turn,True,,,,,,,,,,,S0,,,False
+P5,shields,1,end_turn,True,,,,,,,,,,,S0,,,False
+P5,shields,2,end_turn,True,,,,,,,,,,,S0,,,False
+P5,shields,3,end_turn,True,,,,,,,,,,,S0,,,False
+P5,shields,4,end_turn,True,,,,,,,,,,,S0,,,False
+P5,shields,0,end_turn,True,,,,,,,,,,,S2,,,False
+P5,shields,1,end_turn,True,,,,,,,,,,,S2,,,False
+P5,shields,2,end_turn,True,,,,,,,,,,,S2,,,False
+P5,shields,3,end_turn,True,,,,,,,,,,,S2,,,False
+P5,shields,4,end_turn,True,,,,,,,,,,,S2,,,False
