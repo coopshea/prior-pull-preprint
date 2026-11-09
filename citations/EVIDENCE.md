@@ -6,21 +6,23 @@ A match shows the words are in the source. The verdict is a judgment about wheth
 
 Quotes checked: 43. Not matched: 0.
 
-## Access status
+## Sources
 
-| Ref | Source | What is in this folder |
-|---|---|---|
-| 1 | Shields, Nature 2021 | Full paper, supplied by the author of this draft. Supplementary Information not read |
-| 2 | EvML repository | README and notebook headings as PDF. Data in `data/raw/evml` |
-| 3 | Gupta, EMNLP Findings 2025 | Full paper |
-| 4 | MacKnight, arXiv 2025 | Full paper |
-| 5 | Muller, arXiv 2026 | Full paper |
-| 6 | Cooper, Research Square 2026 | Full manuscript and SI |
-| 7 | Zhang et al. (SciSycEval), EMNLP Findings 2026 | Full paper |
-| 8 | Cisse, Digital Discovery 2026 | Full paper (CC BY). Supplementary Information not read |
-| 9 | Perera, Science 2018 | PubMed abstract only. Closed access |
-| 10 | Zenodo 23953649 | README and record as PDF |
-| 11 | Das et al., JACS 2026 | Preprint and Open Reaction Database record. JACS version not downloaded |
+Papers are referenced by link and are not stored in this repository. The File column below names the local copy each quote was checked against.
+
+| Ref | Source | What was checked | Link |
+|---|---|---|---|
+| 1 | Shields, Nature 2021 | Full paper. Supplementary Information not read | https://doi.org/10.1038/s41586-021-03213-y |
+| 2 | EvML repository | README and notebook headings. Data in `data/raw/evml` | https://github.com/b-shields/EvML |
+| 3 | Gupta, EMNLP Findings 2025 | Full paper | https://doi.org/10.48550/arXiv.2509.21403 |
+| 4 | MacKnight, arXiv 2025 | Full paper | https://arxiv.org/abs/2509.00103 |
+| 5 | Muller, arXiv 2026 | Full paper | https://arxiv.org/abs/2609.04564 |
+| 6 | Cooper, Research Square 2026 | Full manuscript and SI | https://doi.org/10.21203/rs.3.rs-10032842/v1 |
+| 7 | Zhang et al. (SciSycEval), EMNLP Findings 2026 | Full paper | Title in the paper's reference list |
+| 8 | Cisse, Digital Discovery 2026 | Full paper. Supplementary Information not read | https://doi.org/10.1039/d5dd00520e |
+| 9 | Perera, Science 2018 | PubMed abstract only | https://doi.org/10.1126/science.aap9112 |
+| 10 | Zenodo 23953649 | README and record | https://zenodo.org/records/23953649 |
+| 11 | Das et al., JACS 2026 | Preprint and Open Reaction Database record. JACS version not read | https://doi.org/10.1021/jacs.6c05959 |
 
 ## Claims and quotes
 

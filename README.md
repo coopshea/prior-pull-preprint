@@ -29,4 +29,4 @@ Real runs need `ANTHROPIC_API_KEY` in a `.env` file and a spend cap passed with 
 
 ## Third-party material
 
-`citations/` contains papers by other authors, kept to verify the citations, and `data/raw/` contains published datasets under their own licenses. Neither is covered by any license for this project. Check redistribution terms before making this repository public.
+Cited papers are referenced by link and are not stored here. `citations/EVIDENCE.md` records short quotes and the page each was checked on. `data/raw/` contains published datasets under their own licenses, listed in `data/SOURCES.md`, with MIT notices in `data/licenses/`.

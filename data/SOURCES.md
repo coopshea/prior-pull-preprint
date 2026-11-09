@@ -10,3 +10,5 @@
 Inclusion rule (DESIGN.md section 3). Excluded after applying it: EDBO aryl amination, 3,955 of 3,960 cells, so incomplete; Cernak blocks JD-03-10 and XZ-01-55, duplicate level names within the block; Iron Mind lookup tables, not distributed in the repositories checked.
 
 | evml | Human versus BO game on the Shields grid, github.com/b-shields/EvML `results/`, 50 players, 100 experiments each, batches of 5 | MIT | 2026-11-08 |
+
+The MIT license texts for EDBO and EvML are in `data/licenses/`.

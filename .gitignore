@@ -6,3 +6,7 @@ runs/*_mock/
 .DS_Store
 *.egg-info/
 .pytest_cache/
+
+# Papers are referenced by link, not redistributed
+citations/*.pdf
+citations/source_text/
