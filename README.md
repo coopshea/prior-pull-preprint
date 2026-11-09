@@ -9,7 +9,8 @@ This is a working research project. It measures one model (Claude Opus 5.5) on m
 | Path | Contents |
 |---|---|
 | `DESIGN.md` | The replay study as run, with its run record |
-| `pages/prior-pull-paper.html` | Draft paper |
+| [`pages/prior-pull-paper.pdf`](pages/prior-pull-paper.pdf) | The paper. Preprint, work in progress |
+| `pages/prior-pull-paper.html` | Source of the paper |
 | `citations/EVIDENCE.md` | Page-level evidence for each citation, checked by `scripts/verify_citations.py` |
 | `data/SOURCES.md` | Data sources and licenses |
 | `runs/core/` | Requests, replies, and measures from the main run |
